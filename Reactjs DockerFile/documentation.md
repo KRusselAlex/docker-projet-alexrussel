@@ -1,6 +1,6 @@
 To use this dockerfile
 
-## create a vue js app 
+## create a react js app 
 
 ```sh
 npx create-react-app "name of react app"

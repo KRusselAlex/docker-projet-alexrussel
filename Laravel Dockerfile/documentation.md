@@ -1,9 +1,9 @@
 To use this dockerfile
 
-## create a vue js app 
+## create a laravel app 
 
 ```sh
-npx create-react-app "name of react app"
+composer create-project laravel/laravel "name of app" 
 
 ```
 #### follow all the step to install what you need to start your vue js app

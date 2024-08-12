@@ -1,20 +1,9 @@
-FROM node:22-alpine3.19 AS build-stage
-
+FROM php:8.3.10
+RUN apt-get update -y && apt-get install -y openssl zip unzip git
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 WORKDIR /app
+COPY . /app
+RUN composer install
 
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-RUN npm run build
-
-# Production with nginx
-FROM nginx:stable-alpine AS production-stage
-
-COPY --from=build-stage /app/build /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8181"]
+EXPOSE 8181
