@@ -1,6 +1,6 @@
 To use this dockerfile
 
-## create a react js app 
+## create a next js app 
 
 ```sh
 npx create-next-app@latest

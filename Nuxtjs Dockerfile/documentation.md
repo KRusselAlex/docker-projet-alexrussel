@@ -1,10 +1,24 @@
 To use this dockerfile
 
-## create a nest js app 
+## create a nuxt js app 
 
 ```sh
-npm i -g @nestjs/cli
-nest new "nest name app"
+npx nuxi@latest init <project-name>
+
+```
+
+### make the script file like that
+
+```sh
+
+"scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
+}
 
 ```
 #### follow all the step to install what you need to start your vue js app
