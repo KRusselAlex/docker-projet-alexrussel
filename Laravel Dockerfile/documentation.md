@@ -28,7 +28,7 @@ docker images
 ## creat a container 
 
 ```sh
-docker run --name "name of your container" -d -p "the port you want to run vue js":80 "name of your image"
+docker run --name "name of your container" -d -p "the port you want to run vue js":8181 "name of your image"
 
 ```
 

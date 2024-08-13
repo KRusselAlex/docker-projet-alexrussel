@@ -40,7 +40,7 @@ docker run --name "name of your container" -d -p "the port you want to run vue j
 
  docker build -t react-app .
  docker images
- docker run --name react-app-container -d -p 3000:3000 react-app
+ docker run --name react-app-container -d -p 3000:80 react-app
  docker ps
 
  ```

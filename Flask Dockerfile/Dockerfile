@@ -1,15 +1,14 @@
-FROM node:22-alpine3.19 AS build-stage
+FROM python:3.13.0rc1-alpine3.20
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY requirement.txt .
 
-RUN npm install
+RUN pip install --no-cache-dir -r requirement.txt
 
 COPY . .
 
-RUN npm run build
+EXPOSE 8000
 
-EXPOSE 3000
+CMD ["python", "app.py"]
 
-CMD ["npm", "run", "start"]
