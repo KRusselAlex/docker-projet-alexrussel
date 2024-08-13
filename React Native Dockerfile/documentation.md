@@ -6,7 +6,7 @@ To use this dockerfile
 npx create-react-app "name of react app"
 
 ```
-#### follow all the step to install what you need to start your vue js app
+#### follow all the step to install what you need to start your native app
 
 #### create a file copy ths dockerfile in the root of the directory
 
@@ -32,5 +32,16 @@ docker images
 docker run --name "name of your container" -d -p "the port you want to run vue js":80 "name of your image"
 
 ```
+
+## Example
+
+```sh
+
+ docker build -t native-app .
+ docker images
+ docker run --name native-app-container -d -p 3000:3000 native-app
+ docker ps
+
+ ```
 
 ### finaly run localhpst the port you are using 

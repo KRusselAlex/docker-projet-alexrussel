@@ -7,7 +7,7 @@ npm i -g @nestjs/cli
 nest new "nest name app"
 
 ```
-#### follow all the step to install what you need to start your vue js app
+#### follow all the step to install what you need to start your nest js app
 
 #### create a file copy ths dockerfile in the root of the directory
 
@@ -34,4 +34,17 @@ docker run --name "name of your container" -d -p "the port you want to run vue j
 
 ```
 
+
+## example 
+
+```sh
+
+ docker build -t nest-app .
+ docker images
+ docker run --name nest-app-container -d -p 3000:3000 nest-app
+ docker ps
+
+ ```
+
+### NB in case you have an error the  port is already used you can change it when running the container 
 ### finaly run localhost the port you are using 

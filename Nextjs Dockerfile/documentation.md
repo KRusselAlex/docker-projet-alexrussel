@@ -1,4 +1,4 @@
-To use this dockerfile
+# To use this dockerfile
 
 ## create a next js app 
 
@@ -6,31 +6,42 @@ To use this dockerfile
 npx create-next-app@latest
 
 ```
-#### follow all the step to install what you need to start your vue js app
+### follow all the step to install what you need to start your next js app
 
-#### create a file copy ths dockerfile in the root of the directory
+### create a file copy ths dockerfile in the root of the directory
 
-#### on the terminal runthe following command to create the image 
+## on the terminal runthe following command to create the image 
 
 ```sh
 docker build -t "name of your image" .
 
 ```
-#### NB: dont worry if you see warnings this only means that there are command in dockerfile which are not in capital letter like as you can change to AS
+### NB: dont worry if you see warnings this only means that there are command in dockerfile which are not in capital letter like as you can change to AS
 
-#### if you have a message like permision denied start your command with sudo and put your password
+### if you have a message like permision denied start your command with sudo and put your password
 
-#### if you want to see the image created type
+### if you want to see the image created type
 
 ```sh
 docker images
 
 ```
-## creat a container 
+## Creat a container 
 
 ```sh
 docker run --name "name of your container" -d -p "the port you want to run vue js":3000 "name of your image"
 
 ```
 
+## example 
+
+```sh
+
+ docker build -t next-app .
+ docker images
+ docker run --name next-app-container -d -p 3000:3000 next-app
+ docker ps
+
+ ```
+### NB in case you have an error the  port is already used you can change it when running the container 
 ### finaly run localhpst the port you are using 

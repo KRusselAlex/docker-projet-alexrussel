@@ -33,4 +33,15 @@ docker run --name "name of your container" -d -p "the port you want to run vue j
 
 ```
 
+## example 
+
+```sh
+
+ docker build -t vue-app .
+ docker images
+ docker run --name vue-app-container -d -p 3000:3000 vue-app
+ docker ps
+
+ ```
+
 ### finaly run localhost the port you are using 
