@@ -1,10 +1,9 @@
 To use this dockerfile
 
-## create a nest js app 
+## create a react js app 
 
 ```sh
-npm i -g @nestjs/cli
-nest new "nest name app"
+npx create-react-app "name of react app"
 
 ```
 #### follow all the step to install what you need to start your vue js app
@@ -30,8 +29,8 @@ docker images
 ## creat a container 
 
 ```sh
-docker run --name "name of your container" -d -p "the port you want to run vue js":3000 "name of your image"
+docker run --name "name of your container" -d -p "the port you want to run vue js":80 "name of your image"
 
 ```
 
-### finaly run localhost the port you are using 
+### finaly run localhpst the port you are using 

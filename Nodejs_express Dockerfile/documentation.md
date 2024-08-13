@@ -1,11 +1,17 @@
 To use this dockerfile
 
-## create a nest js app 
+## create a express js app 
 
 ```sh
-npm i -g @nestjs/cli
-nest new "nest name app"
+nprm install express
 
+```
+
+### add this in package.json to be able to use ES6
+
+```sh
+
+"type": "module",
 ```
 #### follow all the step to install what you need to start your vue js app
 
@@ -34,4 +40,4 @@ docker run --name "name of your container" -d -p "the port you want to run vue j
 
 ```
 
-### finaly run localhost the port you are using 
+### finaly run localhpst the port you are using 
