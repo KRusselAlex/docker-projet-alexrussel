@@ -1,0 +1,26 @@
+services:
+
+  laravelContainer:
+    image: laravel-app
+    ports:
+      - 8000:8181
+    depends_on:
+      - 'mysqlContainer'
+
+  vueContainer:
+    image: vue-app
+    ports:
+      - 5000:80
+  mysqlContainer:
+    image: mysql:9
+    ports:
+      - 3309:3306
+    working_dir: /app
+    environment:
+      MYSQL_ROOT_PASSWORD: kouawou2000
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_HOST: mysql
+      MYSQL_PASSWORD: kouawou2000
+      MYSQL_DB: yowl
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    
